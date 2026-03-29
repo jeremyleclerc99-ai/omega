@@ -1,0 +1,37 @@
+<nav>
+  {% if page.lang == "en" %}
+    <a href="/en/">Home</a>
+    <a href="/en/about">About</a>
+    <a href="/about" class="lang-switch">FR</a>
+  {% else %}
+    <a href="/">Accueil</a>
+    <a href="/about">À Propos</a>
+    <a href="/en/" class="lang-switch">EN</a>
+  {% endif %}
+</nav>
+
+<header class="site-header">
+  <div class="header-container">
+    
+    <div class="header-left">
+      <a href="{% if page.lang == 'en' %}/en/{% else %}/{% endif %}" class="logo">
+        <img src="{{ '/assets/images/website-logo.svg' | relative_url }}" alt="Oméga Déménagement">
+      </a>
+    </div>
+
+    <div class="header-center">
+      <a href="#quote-form" class="btn-quote">
+        {% if page.lang == 'en' %} Free Quote {% else %} Estimation Gratuite {% endif %}
+      </a>
+    </div>
+
+    <div class="header-right">
+      {% if page.lang == 'fr' %}
+        <a href="/en{{ page.url }}" class="lang-switch">EN</a>
+      {% else %}
+        <a href="{{ page.url | remove: '/en' | default: '/' }}" class="lang-switch">FR</a>
+      {% endif %}
+    </div>
+
+  </div>
+</header>

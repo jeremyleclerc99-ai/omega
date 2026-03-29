@@ -1,0 +1,20 @@
+<form action="https://api.staticforms.xyz/submit" method="POST">
+  <input type="hidden" name="accessKey" value="your-key-here">
+  
+  <label>
+    {% if page.lang == 'en' %} Full Name {% else %} Nom Complet {% endif %}
+  </label>
+  <input type="text" name="name" required>
+
+  <label>
+    {% if page.lang == 'en' %} Service Type {% else %} Type de Service {% endif %}
+  </label>
+  <select name="service">
+    <option value="moving">{% if page.lang == 'en' %} Moving {% else %} Déménagement {% endif %}</option>
+    <option value="removal">{% if page.lang == 'en' %} Removal {% else %} Débarras {% endif %}</option>
+  </select>
+
+  <button type="submit">
+    {% if page.lang == 'en' %} Send Request {% else %} Envoyer {% endif %}
+  </button>
+</form>

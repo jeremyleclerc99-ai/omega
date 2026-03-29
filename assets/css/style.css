@@ -1,0 +1,98 @@
+---
+---
+
+:root {
+
+  --font-1: "Elms Sans";
+
+
+  --color-1: #ffff;
+  --color-2: #0A3015;
+  --color-3: #299649;
+  --color-4: ;
+
+
+
+
+}
+
+/* Reset some defaults so the header touches the top */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Solid Header Style */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 0;
+  background-color: #000000; /* Solid White - Change to #1a1a1a for Dark Mode */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a professional "lift" */
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo Sizing */
+.logo img {
+  height: 60px; /* Increased size slightly for a solid header */
+  width: auto;
+  display: block;
+}
+
+/* Actions Group */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Language Switcher - Styled for a Solid Background */
+.lang-switch {
+  font-family: var(--font-1);
+  text-decoration: none;
+  color: #299649;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+
+/* The "Free Quote" CTA Button */
+.btn-quote {
+  font-family: var(--font-1);
+  background-color: #ff5e00; /* Bold Orange for high conversion */
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 6px; /* Slightly more "industrial/moving company" feel than round */
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-quote:hover {
+  background-color: #e05200;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .logo img { height: 45px; }
+  .btn-quote { padding: 10px 15px; font-size: 0.75rem; }
+  .header-actions { gap: 10px; }
+}

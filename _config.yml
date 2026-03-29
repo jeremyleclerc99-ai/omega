@@ -1,0 +1,23 @@
+# Site Settings
+title: Oméga Déménagement
+description: Service de déménagement et débarras à Gatineau-Ottawa.
+url: "http://omegademenagement.com"
+baseurl: ""
+
+# Build Settings
+# This line is crucial: it tells Jekyll NOT to use a default theme
+theme:
+
+# Collections & Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude these files from the final website build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
